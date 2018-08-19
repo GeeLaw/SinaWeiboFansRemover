@@ -1,0 +1,19 @@
+{
+    "name": "Sina Weibo Follower Remover",
+    "author": "Gee Law",
+    "version": "1.0",
+    "description": "Remove Sina Weibo followers fast and accurately. If not working, try refreshing weibo.com/<user id>/fans page.",
+    "permissions":
+    [
+        "*://*.weibo.com/*"
+    ],
+    "content_scripts":
+    [
+        {
+            "run_at": "document_idle",
+            "matches": ["*://*.weibo.com/*"],
+            "js": ["contentscript.js"]
+        }
+    ],
+    "web_accessible_resources": ["fansRemover.js"]
+}
